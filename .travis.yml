@@ -1,13 +1,10 @@
 language: node_js
 node_js:
-- '0.11'
+- 4.4.0
 env:
   global:
-    - secure: i33p1k4Wk1JFm1kiVPGG6StjhXUTdtg6EyMlVuARS5npioNymFgl3RgkNzar6joRIdGp7Fce0Px5B6Iy1U6LZgGOneogVk9VmEBWFtheiL/O3rzujiD3DTw7WeH6vllCjV9O9GodpZ+wbHxgq1I3aNr/n37iyL3Hc3cMspW+7kg=
-    - secure: cHXdgud0+4z21j8U82FsNj+LSRmMPNofgqg0Vroiv2a3GPcKXHzBki/1ZoTEGBDBY/UCADlD7pWRXq5JgxGxfjXGopT2/GBH5zGlXOoTyme3/PyuJgnQaAU1nXvrsxq69x9V11/mYxG/kQ0oCT0BgMFcRz6hoBdiBZYST7SdBAc=
-    - NODE_ENV: travis
-
-before_install:
-  - npm install
-  - npm install -g bower
-  - bower install
+  - secure: gaEfbACVQEtdXK2cJgNphqxYCJzNgKBZuE9EgD6TsxKKPtLgBvpk/yA2VGX9j1ppn+QUmYsQEc+yXyPXaY3cVPAUDoYpJRS3gq3dz++pQrNQjxYsG2j9rCoN5TGAUau3w8GVMdLpUXxfVx5hvocP4nc9e/UKjva4H+LRzi5h3uk=
+  - secure: MFZuzAYhk8Y4HBCpczi8pK0Xy2TvzO7/SGt/FbyRBvGWOzRNW70L+Yf//sGMDhMfXki6gGPGJE/L32P6Wma2aPdk3T2+7s7y4LIngcgTa0XhpdUt3IyRx/P8MgyEya0rEAL+uMPp0qCywS9syl6TtFHOnxUn+R9fkdz+hRwZAIU=
+script:
+  - node_modules/.bin/gulp test:ci
+  - node_modules/.bin/codecov
